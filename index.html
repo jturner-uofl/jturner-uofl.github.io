@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jason Turner, PhD — Statistical Software</title>
+  <meta name="description" content="Open-source Python packages for statistical inference, reporting, and corpus analysis by Jason Turner, PhD.">
+  <link rel="icon" type="image/png" href="cardinal.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <img class="logo" src="cardinal.png" alt="Cardinal circuit-board logo">
+      <h1>Jason Turner, <span class="phd">PhD</span></h1>
+      <p class="tagline">Data Scientist</p>
+      <ul class="focus">
+        <li>NLP</li>
+        <li>LLMs</li>
+        <li>Clinical Text</li>
+        <li>Statistics</li>
+        <li>Experimental Design</li>
+        <li>Sports Analytics</li>
+      </ul>
+      <nav class="links">
+        <a href="https://github.com/jturner-uofl">GitHub</a>
+        <a href="https://scholar.google.com/citations?user=Nb7S6WcAAAAJ&hl=en">Google Scholar</a>
+        <a id="cv-link" href="cv.pdf" target="_blank" rel="noopener">CV</a>
+        <a href="https://forms.gle/9JNAEmw7QL7txdmR6" target="_blank" rel="noopener">Contact</a>
+      </nav>
+    </header>
+
+    <section class="projects">
+      <h2>Packages</h2>
+
+      <article class="card">
+        <h3><a href="https://github.com/jturner-uofl/pycorpdiff">pycorpdiff</a></h3>
+        <p>Comparative corpus analysis for Python: keyness, collocations, semantic shift, and temporal trajectories.</p>
+        <p class="meta"><span class="lang">Python</span></p>
+      </article>
+
+      <article class="card">
+        <h3><a href="https://github.com/jturner-uofl/pymmeans">pymmeans</a></h3>
+        <p>Estimated marginal means, contrasts, and small-sample mixed-model inference for Python — a native port of the ideas behind R's <code>emmeans</code>.</p>
+        <p class="meta"><span class="lang">Python</span></p>
+      </article>
+
+      <article class="card">
+        <h3><a href="https://github.com/jturner-uofl/pysofra">pysofra</a></h3>
+        <p>Publication-ready Table 1, regression, and survival tables — a Python equivalent of R's <code>gtsummary</code> and <code>tableone</code>.</p>
+        <p class="meta"><span class="lang">Python</span></p>
+      </article>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year">2026</span> Jason Turner, PhD ·
+        <a href="https://github.com/jturner-uofl">github.com/jturner-uofl</a></p>
+    </footer>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Cache-bust the CV link so visitors always fetch the latest PDF.
+    (function () {
+      var cv = document.getElementById('cv-link');
+      if (cv) cv.href = 'cv.pdf?t=' + Date.now();
+    })();
+  </script>
+</body>
+</html>

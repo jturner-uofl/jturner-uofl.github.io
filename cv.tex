@@ -1,0 +1,137 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\geometry{margin=0.75in, top=0.5in}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\definecolor{textgray}{RGB}{30,30,30}
+\color{textgray}
+
+\usepackage[hyphens]{url}
+\urlstyle{same}
+\usepackage{hyperref}
+
+\usepackage{titlesec}
+\usepackage{fontawesome}
+\usepackage{parskip}
+\usepackage{multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    filecolor=magenta,
+    urlcolor=red,
+    breaklinks=true
+}
+
+\usepackage{array}
+\setlength{\tabcolsep}{0pt}
+\setlength{\parskip}{0pt}
+
+% Compact experience item command (unchanged)
+\newcommand{\expitem}[3]{%
+  \noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{1.55in}@{}}%
+    \textbf{#1} - \textit{#2} & #3\\
+  \end{tabularx}\vspace{1pt}%
+}
+
+% Section title formatting
+\titleformat{\section}{
+    \vspace{-5pt}\large\bfseries\sffamily\raggedright\color{textgray}
+}{}{0em}{}[\titlerule]
+
+% Even section spacing
+\titlespacing*{\section}{0pt}{9pt plus 1pt minus 1pt}{7pt plus 1pt minus 1pt}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Large \textbf{Jason Turner, Ph.D.}}\\[3pt]
+    \faMapMarker\ Louisville, KY \quad$|$\quad
+    \faGlobe\ \href{https://jturner-uofl.github.io/}{jturner-uofl.github.io}
+\end{center}
+
+% Professional Summary
+\section*{Professional Summary}
+\noindent
+Data Scientist with a Ph.D. in Computer Science and 10+ years building AI and machine learning solutions across research, analytics, and production. Expertise in large-scale NLP, LLM automation, and document intelligence platforms processing high-volume clinical and claims data.
+
+% Education
+\section*{Education}
+
+\noindent\textbf{University of Louisville -- J.B. Speed School of Engineering, Louisville, KY}\\
+Ph.D., Computer Science and Engineering; M.S., Computer Science\\
+\noindent\textbf{Eastern Kentucky University, Richmond, KY}\\
+M.S., Applied Computing; B.S., Statistics; B.S., Computer Science  \\
+\noindent\textbf{Hazard Community College, Hazard, KY} - A.S.
+
+% Industry Experience
+\section*{Data Science Experience}
+
+\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{1.55in}@{}}
+\textbf{Humana Inc., Louisville, KY} &   \\[0pt]
+\textit{Senior Data Scientist / Senior Cognitive \& Machine Learning Professional} & 06/2021 - Present \\[-1pt]
+\textit{Cognitive \& Machine Learning Professional II / Analytics Consultant} & 08/2017 - 06/2021
+\end{tabularx}
+\vspace{-6pt} % slightly tighter, was -5pt but keeping more even
+
+\noindent
+\textperiodcentered{} Developed and benchmarked LLM-based document automation systems for healthcare claims workflows.\\
+\textperiodcentered{} Key contributor to an enterprise OCR platform processing thousands of medical documents daily.\\
+\textperiodcentered{}  Built a machine-learning risk model to flag high-risk orders, reducing reshipment losses.\\
+\textperiodcentered{} Designed NLP models for entity extraction, classification, and semantic similarity in claims.\\
+\textperiodcentered{} Evaluated and optimized OCR and handwriting recognition models to improve data quality and performance.\\
+\textperiodcentered{} Analyzed user data and applied statistical testing to identify usage patterns and improvement opportunities.\\
+\textperiodcentered{} Applied medical ontologies (SNOMED, ICD) to normalize clinical concepts and improve text analytics.\\
+
+\vspace{-9pt} % tightened Humana → Pilot spacing slightly
+\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}p{1.55in}@{}}
+\textbf{Pilot Travel Centers LLC, Knoxville, TN} &   \\[0pt]
+\textit{Business Intelligence Data Scientist} & 05/2015 - 08/2017 \\
+\end{tabularx}
+\vspace{-6pt} % slightly tighter and even with rest of doc
+
+\noindent
+\textperiodcentered{} Applied statistical and machine learning methods to pricing, site selection, event impact, and text analysis.\\
+\textperiodcentered{} Performed text mining on customer service logs to identify recurring issues, operational pain points, and trends.\\
+% \textperiodcentered{} Developed reporting and analysis transforming operational data into actionable insights for business strategy.\\
+\vspace{-7pt} % tightened Pilot → Academic spacing for evenness
+
+% Other Technical Experience
+\section*{Prior Technical Experience}
+\noindent
+\textbf{University of Kentucky --} Data Research Analyst, IT Support Specialist, Programmer\\
+\textbf{Additional:} US Dressage Federation, Analysts International (Lexmark), SouthEast Telephone, iEntry, eCampus
+%Academic Experience
+\section*{Select Academic Experience}
+\noindent
+\textbf{University of Louisville}, Louisville, KY - Lecturer; Research Member, Data Mining Lab, CSE Dept (Ongoing)\\
+% Campbellsville University, Louisville, KY - Adjunct Faculty, CIS Dept\\
+\textbf{St. Catharine College}, Bardstown, KY - Adjunct Faculty, CIS Dept\\
+\textbf{Bluegrass Community \& Technical College}, Lexington, KY - Adjunct Faculty, CIS/IS Dept
+
+% Skills
+\section*{Skills}
+\noindent
+\textbf{Languages \& Tools:} Python, R, SQL, Bash, PyTorch, TensorFlow, scikit-learn, Hugging Face, spaCy, Azure\\
+\textbf{Specializations:} NLP, LLMs, GenAI, Computer Vision, OCR, Statistical Modeling, Deep Learning\\
+\textbf{Visualization:} Tableau, Matplotlib, ggplot2, Plotly\\
+\textbf{Research Areas:} Information Extraction, Clinical Text Mining, Social Networks
+
+% Awards/Honors
+\section*{Awards/Honors}
+\noindent \textperiodcentered{} 2022 JB Speed School of Engineering CSE Doctoral Award\\ %
+\textperiodcentered{} Humana Star Award\\
+\textperiodcentered{} SAS F2009 Business Forecasting Conference (1 of 3 poster prizes)\\
+\textperiodcentered{} Eastern Kentucky University Dean's List\\
+\textperiodcentered{} Eastern Kentucky University NSF Computer Science, Engineering, and Mathematics Scholarship
+
+\end{document}
